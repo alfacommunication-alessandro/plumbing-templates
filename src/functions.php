@@ -61,7 +61,7 @@ function set_template_directory(string $path, string $post_type = 'page')
  */
 function get_wordpress_template_directory($post_type)
 {
-    if (is_child_theme) {
+    if (is_child_theme()) {
         return apply_filters('template-dir/theme-directory', get_stylesheet_directory(), $post_type);
     }
     
